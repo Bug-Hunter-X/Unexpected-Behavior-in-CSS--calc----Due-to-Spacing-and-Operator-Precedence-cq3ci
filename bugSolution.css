@@ -1,0 +1,12 @@
+The solution involves careful attention to spacing and explicit use of parentheses to control the order of operations:
+
+```css
+.element {
+  width: calc(100% - 20px); /* Correct spacing */
+}
+
+.element2 {
+  width: calc((100% / 2) + 10px); /* Correct precedence using parentheses */
+}
+```
+By eliminating unnecessary spaces and using parentheses to clearly define the order of calculations, you ensure that the `calc()` function produces the expected results.
