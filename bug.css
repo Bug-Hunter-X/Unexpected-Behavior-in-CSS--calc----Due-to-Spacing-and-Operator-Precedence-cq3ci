@@ -1,0 +1,21 @@
+The CSS property `calc()` is used to perform calculations within CSS. However, it can sometimes lead to unexpected results due to incorrect spacing or operator precedence. For example, consider the following code:
+
+```css
+.element {
+  width: calc(100% - 20px);
+}
+```
+
+This code intends to set the width to 100% minus 20 pixels. However, if there's an extra space between the `-` operator and the `20px`, some browsers might interpret it incorrectly, leading to unexpected layout issues.
+Another potential issue is with operator precedence.  If the calculation involves multiple operators, the order of operations might not be what's expected without using parentheses appropriately:
+
+```css
+.element {
+  width: calc(100% / 2 + 10px);
+}
+/*Should be*/
+.element {
+  width: calc((100% / 2) + 10px);
+}
+```
+In this example, without parentheses, the division might be performed after the addition, leading to an unexpected outcome. Always use parentheses to ensure the intended order of operations.
